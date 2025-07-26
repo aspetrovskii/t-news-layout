@@ -1,0 +1,61 @@
+@import "theme.css";
+
+.button{
+    --button-bg: var(--bg-neutral-1);
+    --button-bg-hover: var(--bg-focus-1);
+    --button-bg-active: var(--bg-active-1);
+    --button-text: var(--bg-neutral-1);
+    --bg-accent-active: var(--bg-accent-active-1);
+
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 8px;
+    height: 44px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+
+
+    @media screen and (prefers-reduced-motion: no-preference) {
+        transition: background-color .2s linear;
+    }
+
+    &.primary{
+        --button-bg: var(--bg-accent-1);
+        --button-bg-hover: var(--bg-accent-hover);
+        --button-bg-active: var(--bg-accent-active);
+        --button-text: var(--text-primary);
+        --bg-accent-active: var(--bg-accent-active-1);
+    }
+
+    &.secondary{
+        --button-bg: var(--bg-neutral-1);
+        --button-bg-hover: var(--bg-focus-1);
+        --button-bg-active: var(--bg-active-1);
+        --button-text: var(--text-action);
+        --bg-accent-active: var(--bg-accent-active-2);
+    }
+
+    &:disabled{
+        background-color: #ccc;
+    }
+
+    &:not(disabled){
+
+        @media screen and (hover: hover){
+
+            &:hover{
+                transition: none;
+                background-color: var(--button-bg-hover);
+            }
+        }
+
+        &:active{
+            background-color: var(--bg-accent-active);
+            transition: none;
+        }
+    }
+
+    
+}

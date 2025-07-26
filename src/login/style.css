@@ -1,0 +1,30 @@
+@import "../theme.css";
+@import "inputs.css";
+@import "buttons.css";
+@import "login.css";
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin:0;
+    min-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header{
+    flex: 0 0 64px;
+    background-color: rgba(246, 247, 248, 1);
+}
+
+.content{
+    flex: 1 0 auto;
+    display: flex;
+    background-color: #fff;
+}

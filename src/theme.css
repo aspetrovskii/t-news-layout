@@ -1,0 +1,14 @@
+:root {
+  --bg-neutral-1: rgba(36, 74, 127, 0.06);
+  --bg-accent-1: rgba(255, 221, 45, 1);
+  --bg-accent-hover: rgba(251, 223, 78, 1);
+  --bg-accent-active-1: rgba(163, 139, 21, 1);
+  --bg-accent-active-2: rgb(80, 80, 80, 0.35);
+  --bg-focus-1: rgba(125, 135, 151, 0.06);
+  --bg-active-1: rgba(169, 182, 197, 0.06);
+  --border-neutral-1: rgb(80, 80, 80);
+  --text-primary: rgba(0, 0, 0, 0.75);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --text-primary-on-accent: rgba(51, 51, 51, 1);
+  --text-action: rgba(18, 109, 247, 1);
+}

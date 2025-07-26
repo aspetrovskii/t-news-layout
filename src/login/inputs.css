@@ -1,0 +1,46 @@
+@import "theme.css";
+
+.text-input{
+    --input-border-radius: 12px;
+
+    border-radius: var(--input-border-radius);
+    padding: 16px;
+    height: 56px;
+    width: auto;
+    min-width: unset;
+    max-width: unset;
+    flex: 1 1 auto;
+    background-color: var(--bg-neutral-1);
+    border: thin solid transparent;
+    color: var(--text-primary);
+
+    @media screen and (prefers-reduced-motion: no-preference){
+        transition: border .2s linear, background-color .2s linear, color .2s linear;
+    }
+
+    &::placeholder{
+        color: var(--text-secondary);
+    }
+
+    &.medium{
+        font-size: 13px;
+        line-height: 20px;
+        padding: 6px 10px;
+        height: 32px;
+        --input-border-radius: 8px;
+    }
+
+    &.large{
+        font-size: 15px;
+        line-height: 24px;
+        padding: 16px;
+        height: 56px;
+        --input-border-radius: 12px;
+    }
+
+    &:focus{
+        outline:none;
+        background-color: var(--bg-focus-1);
+        border-color: var(--border-neutral-1);
+    }
+}
