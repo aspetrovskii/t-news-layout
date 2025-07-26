@@ -65,6 +65,7 @@
 
             .signup{
                 --boxed-text-color: var(--text-secondary);
+                --bg-color-pic: none;
 
                 width: auto;
                 height: auto;
@@ -72,6 +73,7 @@
                 flex-wrap: nowrap;
                 gap: 8px;
                 border: none;
+                padding: 0;
                 background-color: var(--bg-heading);
                 color: var(--boxed-text-color);
 
@@ -86,12 +88,14 @@
                 &:not(disabled){
                     @media screen and (hover: hover){
                         &:hover{
-                            --boxed-text-color: var(--text-primary-on-accent);
+                            --boxed-text-color: var(--bg-accent-active-3);
+                            --bg-color-pic: white;
                         }
                     }
 
                     &:active{
-                        background-color: var(--bg-accent-active);
+                        --bg-color-pic: var(--bg-accent-active-2);
+                        --boxed-text-color: var(--text-primary-on-accent);
                         /* transition: none; */
                     }
                 }
@@ -105,8 +109,18 @@
                     vertical-align: middle;
                 }
 
-                .heading-button{
+                .heading-button-pic{
                     width: 24px;
+                }
+
+                .profile-button-pic{
+                    @media screen and (prefers-reduced-motion: no-preference){
+                        transition: border .2s linear, background-color .2s linear, color .2s linear;
+                    }
+                    
+                    border-radius: 8px;
+                    width: 32px;
+                    background-color: var(--bg-color-pic);
                 }
             }
         }
