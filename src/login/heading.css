@@ -1,0 +1,60 @@
+@import "../theme.css";
+
+.heading{
+    background-color: var(--bg-heading);
+    width: 100%;
+    height: 64px;
+    max-height: 100px;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+
+    .heading-cent{
+        max-width: 824px;
+        width: 100%;
+        column-gap: 32px;
+        flex-wrap: wrap;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: space-between;
+
+        .heading-left{
+            width: auto;
+            min-width: 29px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: nowrap;
+            margin-left: 10px;
+            justify-content: flex-start;
+            
+            .heading-left-logo{
+                height: 29px;
+            }
+
+            .heading-left-field{
+                height: 32px;
+                width: 320px;
+                border-radius: 8px;
+                background-color: var(--bg-neutral-1);
+                padding: 6px 10px;
+                border: thin solid transparent;
+
+                @media screen and (prefers-reduced-motion: no-preference){
+                    transition: border .2s linear, background-color .2s linear, color .2s linear;
+                }
+
+                &:focus{
+                    outline:none;
+                    background-color: var(--bg-focus-1);
+                    border-color: var(--border-neutral-1);
+                }
+            }
+        }
+        .heading-right{
+            min-width: 70px;
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-@import "theme.css";
+@import "../theme.css";
 
 .button{
     --button-bg: var(--bg-neutral-1);
@@ -46,14 +46,14 @@
         @media screen and (hover: hover){
 
             &:hover{
-                transition: none;
+                /* transition: none; */
                 background-color: var(--button-bg-hover);
             }
         }
 
         &:active{
             background-color: var(--bg-accent-active);
-            transition: none;
+            /* transition: none; */
         }
     }
 
