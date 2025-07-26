@@ -1,37 +1,31 @@
-@import "../theme.css";
+@import "../themes/theme.css";
+@import "../themes/buttons.css";
+@import "../themes/heading.css";
+@import "../themes/inputs.css";
+@import "../themes/login.css";
 
-.login-dialog{
-    margin: auto;
-    min-width: 320px;
-    width: 414px;
-    padding: 20px 24px 24px;
-    border-radius: 20px;
-    box-shadow: 0 6px 34px rgba(0,0,0, 0.04);
+*{
+    box-sizing: border-box;
+}
 
-    .login-title{
-        text-align: center;
-        font-family: sans-serif;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        margin-block-end: 20px;
-    }
+html{
+    height: 100%;
+}
 
-    .login-fields{
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 20px;
+body{
+    margin:0;
+    min-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
 
-        .field-row{
-            display:flex;
-        }
-    }
+.header{
+    flex: 0 0 64px;
+    background-color: rgba(246, 247, 248, 1);
+}
 
-    .login-footer{
-        margin-block-start: 20px;
-        display: flex;
-        flex-flow: wrap-reverse;
-        gap: 12px;
-
-    }
+.content{
+    flex: 1 0 auto;
+    display: flex;
+    background-color: #fff;
 }

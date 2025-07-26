@@ -1,8 +1,8 @@
-@import "../theme.css";
-@import "inputs.css";
-@import "buttons.css";
-@import "login.css";
-@import "heading.css";
+@import "../themes/theme.css";
+@import "../themes/buttons.css";
+@import "../themes/heading.css";
+@import "../themes/inputs.css";
+@import "../themes/login.css";
 
 *{
     box-sizing: border-box;
