@@ -1,23 +1,26 @@
-@import "../theme.css";
+@import "theme.css";
 
 .heading{
     background-color: var(--bg-heading);
     width: 100%;
     height: 64px;
     max-height: 100px;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
-    position: absolute;
+    position: fixed;
+    font-family: sans-serif;
 
     .heading-cent{
         max-width: 824px;
+        min-width: 450px;
         width: 100%;
         column-gap: 32px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         display: flex;
         flex: 1 1 auto;
         justify-content: space-between;
+        margin: 0 10px 0 10px;
 
         .heading-left{
             width: auto;
@@ -26,14 +29,14 @@
             align-items: center;
             gap: 25px;
             flex-wrap: nowrap;
-            margin-left: 10px;
+            /* margin-left: 10px; */
             justify-content: flex-start;
             
-            .heading-left-logo{
+            .logo{
                 height: 29px;
             }
 
-            .heading-left-field{
+            .field{
                 height: 32px;
                 width: 320px;
                 border-radius: 8px;
@@ -54,7 +57,58 @@
         }
         .heading-right{
             min-width: 70px;
-            margin-right: 10px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: auto;
+
+            .signup{
+                --boxed-text-color: var(--text-secondary);
+
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 8px;
+                border: none;
+                background-color: var(--bg-heading);
+                color: var(--boxed-text-color);
+
+                @media screen and (prefers-reduced-motion: no-preference){
+                    transition: border .2s linear, background-color .2s linear, color .2s linear;
+                }
+
+                &:disabled{
+                    background-color: #ccc;
+                }     
+
+                &:not(disabled){
+                    @media screen and (hover: hover){
+                        &:hover{
+                            --boxed-text-color: var(--text-primary-on-accent);
+                        }
+                    }
+
+                    &:active{
+                        background-color: var(--bg-accent-active);
+                        /* transition: none; */
+                    }
+                }
+
+
+                .text{
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                    letter-spacing: 0px;
+                    vertical-align: middle;
+                }
+
+                .heading-button{
+                    width: 24px;
+                }
+            }
         }
     }
 }
