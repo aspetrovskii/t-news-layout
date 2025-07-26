@@ -1,4 +1,4 @@
-@import "../theme.css";
+@import "theme.css";
 
 .button{
     --button-bg: var(--bg-neutral-1);
@@ -27,6 +27,12 @@
         --button-bg-active: var(--bg-accent-active);
         --button-text: var(--text-primary);
         --bg-accent-active: var(--bg-accent-active-1);
+
+        &.less{
+            align-items: center;
+            padding: 0;
+            flex: 0 1 auto;
+        }
     }
 
     &.secondary{
@@ -35,6 +41,12 @@
         --button-bg-active: var(--bg-active-1);
         --button-text: var(--text-action);
         --bg-accent-active: var(--bg-accent-active-2);
+
+        &.less{
+            align-items: center;
+            padding: 0;
+            flex: 0 1 auto;
+        }
     }
 
     &:disabled{
@@ -55,7 +67,5 @@
             background-color: var(--bg-accent-active);
             /* transition: none; */
         }
-    }
-
-    
+    }    
 }
