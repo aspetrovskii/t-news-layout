@@ -29,6 +29,11 @@
         --button-text: var(--text-primary);
         --bg-accent-active: var(--bg-accent-active-1);
 
+        &.x{
+            height: 32px;
+            padding: 0 10px 0 10px;
+        }
+
         &.less{
             align-items: center;
             padding: 0;

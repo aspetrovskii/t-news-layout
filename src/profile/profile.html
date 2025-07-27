@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>T-News — Комментарии к посту</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<header class="heading">
+    <div class="heading-cent">
+        <div class="heading-left">
+            <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
+            <input type="text" class="field" placeholder="Поиск по T-News">
+        </div>
+        <div class="heading-right">
+            <button class="signup">
+                <p class="text">Выйти</p>
+                <img class="heading-button-pic" src="/public/login-button.svg" alt="Выйти">
+            </button>
+            <button class="signup">
+                <img class="profile-button-pic" src="/public/profile-pic.svg" alt="Профиль">
+            </button>
+        </div>
+    </div>
+</header>
+<body>
+    <section class="content">
+        <section class="content-box">
+            <div class="content-build">
+                <div class="base-photo">
+                    <img class="user-photo" src="/public/seneka.jpg" alt="Profile photo">
+                    <button class="c-photo-btn">
+                        Изменить фото
+                    </button>
+                </div>
+                <div class="base-text">
+                    <div class="user-name">
+                        <p class="name">Луций Анней Сенека</p>
+                        <button class="edit-name">
+                            <img class="edit-name-img" src="/public/rename-profile.svg" alt="Rename profile">
+                        </button>
+                    </div>
+                    <div class="user-info">
+                        <p class="info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consectetur
+                             adipisicing elit. Perspiciatis, rerum. Ducimus iste
+                              est quod officia nisi nulla. Alias sit nesciunt facilis,
+                               sequi aut non ab cumque itaque natus at obcaecati
+                                amet voluptatem tempora iusto ipsam sint blanditiis
+                                 voluptates consectetur neque vitae enim? Possimus
+                                  est quisquam eos, delectus ipsa doloribus cum!</p>
+                        <button class="edit-info">
+                            <img class="edit-name-img" src="/public/rename-profile.svg" alt="Rename profile">
+                        </button>
+                    </div>
+                </div>
+                <div class="base-subscribe">
+                    <button class="sub">Подписаться</button>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="content-box">
+            <form class="comment-form">
+                <textarea class="comment-field" placeholder="Введите свой пост"></textarea>
+                <section class="button-area">
+                    <button type="submit" class="button primary x">Отправить</button>
+                </section>
+            </form>
+        </section> -->
+        <section class="tab"></section>
+        <section class="content-box">
+            <section class="posts">
+                <ul class="posts-list">
+                    <li>
+                        <div class="post">
+                            <section class="post-section">
+                                <div class="user">
+                                    <img class="avatar" src="/public/seneka.jpg" alt="Author's avatar">
+                                    <p class="name">Seneka Senekovich</p>
+                                    <button class="comment-delete" title="Удалить" type="button">🗑️</button>
+                                </div>
+                            </section>
+                            <section class="post-section" id="two">
+                                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sapiente aliquam
+                                    sed accusamus quis est deleniti reiciendis amet rerum ratione reprehenderit voluptas, recusandae
+                                    placeat consequuntur? Impedit amet temporibus doloremque ea, voluptatem vitae reprehenderit
+                                    totam perspiciatis similique aliquam accusamus, corporis repellat sunt quis, ipsam maxime
+                                        accusantium earum nesciunt distinctio mollitia voluptas necessitatibus nobis inventore blanditiis!
+                                        Assumenda perferendis fugit eos accusamus asperiores. Impedit ad atque ipsam ducimus magni laudantium
+                                        mollitia dolore natus similique veniam fugiat, nobis excepturi exercitationem minus temporibus,
+                                        dolorum vero, quis dolorem eveniet? Quam veritatis maxime a adipisci dicta cupiditate excepturi
+                                            illum modi. Vitae totam obcaecati quae perferendis voluptates reiciendis.</p>
+                            </section>
+                            <section class="post-section">
+                                <button class="button primary less" type="button">
+                                    <div class="in-button">
+                                        <img class="heart-img" src="/public/button-heart.svg" alt="Like a post">
+                                        <p class="text">21</p>
+                                    </div>
+                                </button>
+                                <button class="button secondary less" type="button">
+                                    <div class="in-button">
+                                        <p class="text">Комментарии 1</p>
+                                    </div>
+                                </button>
+                            </section>
+                        </div>
+                    </li>
+                                        <li>
+                        <div class="post">
+                            <section class="post-section">
+                                <div class="user">
+                                    <img class="avatar" src="/public/seneka.jpg" alt="Author's avatar">
+                                    <p class="name">Seneka Senekovich</p>
+                                    <button class="comment-delete" title="Удалить" type="button">🗑️</button>
+                                </div>
+                            </section>
+                            <section class="post-section" id="two">
+                                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sapiente aliquam
+                                    sed accusamus quis est deleniti reiciendis amet rerum ratione reprehenderit voluptas, recusandae
+                                    placeat consequuntur? Impedit amet temporibus doloremque ea, voluptatem vitae reprehenderit
+                                    totam perspiciatis similique aliquam accusamus, corporis repellat sunt quis, ipsam maxime
+                                        accusantium earum nesciunt distinctio mollitia voluptas necessitatibus nobis inventore blanditiis!
+                                        Assumenda perferendis fugit eos accusamus asperiores. Impedit ad atque ipsam ducimus magni laudantium
+                                        mollitia dolore natus similique veniam fugiat, nobis excepturi exercitationem minus temporibus,
+                                        dolorum vero, quis dolorem eveniet? Quam veritatis maxime a adipisci dicta cupiditate excepturi
+                                            illum modi. Vitae totam obcaecati quae perferendis voluptates reiciendis.</p>
+                            </section>
+                            <section class="post-section">
+                                <button class="button primary less" type="button">
+                                    <div class="in-button">
+                                        <img class="heart-img" src="/public/button-heart.svg" alt="Like a post">
+                                        <p class="text">21</p>
+                                    </div>
+                                </button>
+                                <button class="button secondary less" type="button">
+                                    <div class="in-button">
+                                        <p class="text">Комментарии 1</p>
+                                    </div>
+                                </button>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+</body>
+</html>
