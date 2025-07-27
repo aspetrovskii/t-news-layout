@@ -1,0 +1,172 @@
+@import "../themes/theme.css";
+@import "../themes/buttons.css";
+@import "../themes/heading.css";
+@import "../themes/inputs.css";
+@import "../themes/login.css";
+@import "../themes/posts.css";
+@import "../themes/users.css";
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column nowrap;
+}
+
+.header{
+    flex: 0 0 64px;
+    background-color: rgba(246, 247, 248, 1);
+}
+
+.content{
+    margin-top:129px;
+    flex: 1 1 auto;
+    display: flex;
+    background-color: #fff;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .comments-box{
+        width: 824px;
+        display: flex;
+        justify-content: flex-end;
+
+        .comments-block {
+        margin-top: 30px;
+
+            .comments-list {
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                list-style: none;
+                padding: 0;
+                margin: 0 0 32px 0;
+                font-family: sans-serif;
+
+                .comment {
+                    display: flex;
+                    align-items: flex-start;
+                    background-color: #fff;
+                    border-radius: 16px;
+                    box-shadow: 0 6px 34px rgba(0,0,0, 0.04);
+                    padding: 18px 22px;
+                    gap: 18px;
+                    width: 725px;
+
+                    .comment-content {
+                        flex: 1 1 auto;
+                        display: flex;
+                        flex-direction: column;
+                        width: auto;
+
+                        .comment-header {
+                            display: flex;
+                            align-items: center;
+                            align-content: flex-start;
+                            gap: 8px;
+                            justify-content: flex-start;
+                            width: auto;
+                            flex-wrap: nowrap;
+
+                            .user-comment{
+                                margin: auto;
+                                display:flex;
+                                flex: 1 1 auto;
+                                flex-wrap: nowrap;
+                                gap:10px;
+                                align-items: center;
+
+                                .avatar{
+                                    width: 24px;
+                                    height: 24px;
+                                    border-radius: 12px;
+                                }
+
+                                .name{
+                                    margin: 0;
+                                    font-family: sans-serif;
+                                    font-weight: 500;
+                                    font-size: 24px;
+                                    line-height: 28px;
+                                    letter-spacing: 0px;
+                                    width: auto;
+                                }
+
+                                .comment-delete {
+                                    display: flex;
+                                    background: none;
+                                    border: none;
+                                    color: #bbb;
+                                    font-size: 16px;
+                                    cursor: pointer;
+                                    padding: 0;
+                                }
+
+                            }
+                        }
+
+                        .comment-text {
+                            font-size: 15px;
+                            color: #222;
+                        }
+                    }
+                }
+            }
+
+            .comment-form {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: flex-end;
+                gap: 12px;
+                margin-top: 18px;
+                width: 725px;
+                flex-wrap: wrap;
+
+                .comment-field{
+                    flex: 1 1 auto;
+                    min-height: 108px;
+                    width: 725px;
+                    border-radius: 16px;
+                    background-color: var(--bg-neutral-1);
+                    padding: 14px;
+                    box-sizing: border-box;
+                    font-size: 15px;
+                    border: thin solid transparent;
+                    font-family: sans-serif;
+
+                    @media screen and (prefers-reduced-motion: no-preference){
+                        transition: border .2s linear, background-color .2s linear, color .2s linear;
+                    }
+
+                    &:focus{
+                        outline:none;
+                        background-color: var(--bg-focus-1);
+                        border-color: var(--border-neutral-1);
+                    }
+                }
+
+                .button-area{
+                    width: auto;
+                    display:flex;
+                    justify-content: flex-end;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+    }
+}

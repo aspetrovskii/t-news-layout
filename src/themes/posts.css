@@ -17,73 +17,50 @@
         padding:0;
             flex-wrap: wrap;
 
-        .post{
-            border-radius: 24px;
-            margin: auto;
-            box-shadow: 0 6px 34px rgba(0,0,0, 0.04);
-            width: 100%;
-            display:flex;
-            flex: 1 0 auto;
-            flex-wrap: wrap;
-            gap:0;
+    }
 
-            #two{
-                padding: 0 var(--padding) 0 var(--padding);
+    .post{
+        border-radius: 24px;
+        margin: auto;
+        box-shadow: 0 6px 34px rgba(0,0,0, 0.04);
+        width: 100%;
+        display:flex;
+        flex: 1 0 auto;
+        flex-wrap: wrap;
+        gap:0;
+
+        #two{
+            padding: 0 var(--padding) 0 var(--padding);
+        }
+
+        .post-section{
+            display:flex;
+            width: 824px;
+            height: auto;
+            padding: var(--padding-compensated) var(--padding) var(--padding-compensated) var(--padding);
+            justify-content: flex-start;
+            gap:12px;
+
+
+            .in-button{
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 12px;
+                align-content: center;
+                padding-left: 10px;
+                padding-right: 10px;
+                max-width: 150px;
+                width: auto;
             }
 
-            .post-section{
-                display:flex;
-                width: 824px;
-                height: auto;
-                padding: var(--padding-compensated) var(--padding) var(--padding-compensated) var(--padding);
-                justify-content: flex-start;
-                gap:12px;
-
-
-                .box{
-                    display:flex;
-                    flex-wrap: wrap;
-                    width: 824px;
-                    align-items: center;
-                    gap: 10px;
-
-                    .avatar{
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 12px;
-                    }
-
-                    .name{
-                        margin: 0;
-                        font-family: sans-serif;
-                        font-weight: 500;
-                        font-size: 24px;
-                        line-height: 28px;
-                        letter-spacing: 0px;
-                        width: auto;
-                    }
-                }
-
-                .in-button{
-                    display: flex;
-                    flex-wrap: nowrap;
-                    gap: 12px;
-                    align-content: center;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    max-width: 150px;
-                    width: auto;
-                }
-
-                .post-text{
-                    font-family: sans-serif;
-                    font-weight: 400;
-                    font-style: Regular;
-                    font-size: 15px;
-                    line-height: 24px;
-                    letter-spacing: 0px;
-                    margin: 0;
-                }
+            .post-text{
+                font-family: sans-serif;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 15px;
+                line-height: 24px;
+                letter-spacing: 0px;
+                margin: 0;
             }
         }
     }
