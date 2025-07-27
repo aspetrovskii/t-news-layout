@@ -49,6 +49,19 @@
         }
     }
 
+    &.tertiary{
+        border: 2px solid var(--border-normal);
+        --button-bg: none;
+        --button-bg-hover: var(--bg-accent-hover);
+        --button-bg-active: var(--bg-accent-active);
+        --button-text: var(--text-primary);
+        --bg-accent-active: var(--bg-accent-active-1);
+
+        &.chosen{
+            border: 2px solid var(--bg-accent-1);
+        }
+    }
+
     &:disabled{
         background-color: #ccc;
     }

@@ -4,6 +4,7 @@
 @import "../themes/inputs.css";
 @import "../themes/login.css";
 @import "../themes/posts.css";
+@import "../themes/users.css";
 
 *{
     box-sizing: border-box;
@@ -15,8 +16,8 @@ html{
 
 body{
     margin: 0;
-    min-height: 100%;
     display: flex;
+    flex-wrap: nowrap;
     flex-flow: column nowrap;
 }
 
@@ -30,5 +31,27 @@ body{
     flex: 1 1 auto;
     display: flex;
     background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.content-box{
+    width: 100%;
+    display: flex;
     justify-content: center;
+
+    .choose-buttons{
+        display: flex;
+        max-width: 824px;
+        width: 100%;
+        /* margin: 0 10px 0 10px; */
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+        padding: 0 10px 0 10px;
+        margin: 0 0 44px 0;
+        
+        .button-box{
+            width: auto;
+            height: auto;
+        }
+    }
 }
