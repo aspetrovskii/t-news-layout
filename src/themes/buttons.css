@@ -82,7 +82,7 @@
         }
 
         &:active{
-            background-color: var(--bg-accent-active-1);
+            background-color: var(--bg-accent-active);
             --button-border-color: var(--bg-accent-active-1);
             border-color: var(--button-border-color);
         }
