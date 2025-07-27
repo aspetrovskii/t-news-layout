@@ -6,6 +6,7 @@
     --button-bg-active: var(--bg-active-1);
     --button-text: var(--bg-neutral-1);
     --bg-accent-active: var(--bg-accent-active-1);
+    --button-border-color: var(--border-normal);
 
     background-color: var(--button-bg);
     color: var(--button-text);
@@ -18,7 +19,7 @@
 
 
     @media screen and (prefers-reduced-motion: no-preference) {
-        transition: background-color .2s linear;
+        transition: background-color .2s linear, border-color .2s linear;
     }
 
     &.primary{
@@ -49,6 +50,22 @@
         }
     }
 
+    &.tertiary{
+        border: 2px solid;
+        border-color: var(--button-border-color);
+        --button-bg: none;
+        --button-bg-hover: var(--bg-accent-hover);
+        --button-bg-active: var(--bg-accent-active);
+        --button-text: var(--text-primary);
+        --bg-accent-active: var(--bg-accent-active-1);
+
+        &.chosen{
+            border: 2px solid;
+            --button-border-color: var(--bg-accent-1);
+            border-color: var(--button-border-color);
+        }
+    }
+
     &:disabled{
         background-color: #ccc;
     }
@@ -60,12 +77,14 @@
             &:hover{
                 /* transition: none; */
                 background-color: var(--button-bg-hover);
+                border-color: var(--bg-accent-1);
             }
         }
 
         &:active{
-            background-color: var(--bg-accent-active);
-            /* transition: none; */
+            background-color: var(--bg-accent-active-1);
+            --button-border-color: var(--bg-accent-active-1);
+            border-color: var(--button-border-color);
         }
     }    
 }
