@@ -57,10 +57,22 @@ body{
     gap: 22px;
 }
 
-.user-photo{
+.onto-photo{
+    box-sizing:content-box;
+    display: flex;
     width: 128px;
+    height: 128px;
+    justify-content: center;
+    align-items: center;
     border-radius: 64px;
     border: 4px solid var(--brand-pro);
+}
+
+.user-photo{
+    width: 118px;
+    height: 118px;
+    border-radius: 59px;
+    /* border: 4px solid var(--brand-pro); */
 }
 
 .c-photo-btn{
