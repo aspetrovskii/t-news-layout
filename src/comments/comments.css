@@ -5,6 +5,7 @@
 @import "../themes/login.css";
 @import "../themes/posts.css";
 @import "../themes/users.css";
+@import "../themes/messages.css";
 
 *{
     box-sizing: border-box;

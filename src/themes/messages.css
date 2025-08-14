@@ -1,0 +1,54 @@
+@import "theme.css";
+
+.messages-box{
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+
+    .messages{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        gap: 20px;
+        height: auto;
+        margin: 0 0 16px 16px;
+        padding: 0;
+
+        .message-box{
+            width: 100%;
+
+            opacity: 0;
+            transition: opacity 240ms ease;
+            pointer-events: none;
+
+            &.visible{
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            &.invisible{
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .message{
+                border-radius: 12px;
+                width: auto;
+                min-width: unset;
+                max-width: unset;
+                flex: 1 1 auto;
+                background-color: var(--bg-neutral-1);
+                border: thin solid transparent;
+                color: var(--text-primary-on-accent);
+                justify-content: center;
+                font-size: 15px;
+                line-height: 24px;
+                padding: 16px;
+                height: 56px;
+                font-family: sans-serif;
+                margin: 0   ;
+            }
+        }
+    }
+}

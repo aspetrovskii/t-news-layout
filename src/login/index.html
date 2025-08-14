@@ -17,7 +17,7 @@
         </div>
     </header>
     <section class="content">
-        <form class="login-dialog">
+        <form class="login-dialog" id="login-dialog">
             <header class="login-title">
                 Вход
             </header>
@@ -30,12 +30,19 @@
                 </label>
             </div>
             <footer class="login-footer">
-                <button type="button" class="button secondary">Зарегистрироваться</button>
-                <button type="submit" class="button primary">Войти</button>
+                <button id="signupButton" type="button" class="button secondary">Зарегистрироваться</button>
+                <button id="loginButton" type="submit" class="button primary">Войти</button>
             </footer>
         </form>
     </section>
+    <section class="messages-box">
+        <ul class="messages">
+        </ul>
+    </section>
 
+    <script src="login.js"></script>
+    <!-- <script src="server.js"></script> -->
+    <!-- <script src="../session.js"></script> -->
     <!-- <div>
         <input type="text" placeholder="Введите текст" class="text-input large">
     </div>

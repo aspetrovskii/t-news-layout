@@ -3,6 +3,7 @@
 @import "../themes/heading.css";
 @import "../themes/inputs.css";
 @import "../themes/login.css";
+@import "../themes/messages.css";
 
 *{
     box-sizing: border-box;
