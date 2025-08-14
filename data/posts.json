@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "authorId": "1",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sapiente aliquam sed accusamus quis est deleniti reiciendis amet rerum ratione reprehenderit voluptas, recusandae placeat consequuntur? Impedit amet temporibus doloremque ea, voluptatem vitae reprehenderit totam perspiciatis similique aliquam accusamus, corporis repellat sunt quis, ipsam maxime accusantium earum nesciunt distinctio mollitia voluptas necessitatibus nobis inventore blanditiis! Assumenda perferendis fugit eos accusamus asperiores. Impedit ad atque ipsam ducimus magni laudantium mollitia dolore natus similique veniam fugiat, nobis excepturi exercitationem minus temporibus, dolorum vero, quis dolorem eveniet? Quam veritatis maxime a adipisci dicta cupiditate excepturi illum modi. Vitae totam obcaecati quae perferendis voluptates reiciendis.",
+    "likesCount": 23,
+    "commentsCount": 1,
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "likedBy": [
+      "2",
+      "3",
+      "40739c8e-82d7-4f89-b2f2-04ebf38cf9ef",
+      "6ed09bf4-0cd0-4180-832f-8928b087317e"
+    ]
+  },
+  {
+    "id": "2",
+    "authorId": "2",
+    "content": "Мудрость приходит с опытом, а опыт приходит с ошибками. Не бойтесь ошибаться, бойтесь не учиться на своих ошибках. Каждый день - это новая возможность стать лучше.",
+    "likesCount": 44,
+    "commentsCount": 3,
+    "createdAt": "2024-01-16T14:20:00.000Z",
+    "likedBy": [
+      "3"
+    ]
+  },
+  {
+    "id": "3",
+    "authorId": "3",
+    "content": "Свобода - это не отсутствие ограничений, а способность выбирать свои ограничения. Только тот, кто контролирует свои желания, по-настоящему свободен.",
+    "likesCount": 67,
+    "commentsCount": 3,
+    "createdAt": "2024-01-17T09:15:00.000Z",
+    "likedBy": [
+      "2",
+      "6ed09bf4-0cd0-4180-832f-8928b087317e"
+    ]
+  },
+  {
+    "id": "4",
+    "authorId": "1",
+    "content": "Время - самый ценный ресурс, который у нас есть. Не тратьте его на пустые разговоры и бесполезные занятия. Каждая минута должна быть потрачена с пользой.",
+    "likesCount": 34,
+    "commentsCount": 0,
+    "createdAt": "2024-01-18T16:45:00.000Z",
+    "likedBy": [
+      "2"
+    ]
+  },
+  {
+    "id": "a0bcb76b-ea46-4772-9417-ca2bdd5262ce",
+    "authorId": "6ed09bf4-0cd0-4180-832f-8928b087317e",
+    "content": "ХУЙНЯ",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "createdAt": "2025-08-01T14:01:09.635Z",
+    "likedBy": []
+  },
+  {
+    "id": "c269e56f-d800-40d0-81c2-3d90309b5cda",
+    "authorId": "6ed09bf4-0cd0-4180-832f-8928b087317e",
+    "content": "Обэме лох либералы сосать!",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "createdAt": "2025-08-01T14:01:41.548Z",
+    "likedBy": []
+  },
+  {
+    "id": "8509de75-4dee-45a2-8f5e-fbd6d5f59ad8",
+    "authorId": "6ed09bf4-0cd0-4180-832f-8928b087317e",
+    "content": "<script>alert(\"я гей епта\")</script>",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "createdAt": "2025-08-01T14:02:28.295Z",
+    "likedBy": []
+  }
+]
