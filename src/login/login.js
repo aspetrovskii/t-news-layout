@@ -1,3 +1,5 @@
+import { showMessage } from "../front.mjs";
+
 const signupButton = document.getElementById("signupButton");
 const loginDialog = document.getElementById("login-dialog");
 
@@ -23,25 +25,7 @@ async function handleLoginSubmit(e){
         await login(username, password);
         window.open('../main/main-auth.html', '_self');
     } catch (err){
-        const messageList = document.querySelector('ul[class="messages"]');
-        
-        const message = document.createElement("li");
-        message.className = "message-box invisible";
-        
-        const messageText = document.createElement("div");
-        messageText.textContent = err.message;
-        messageText.className = "message";
-
-        message.append(messageText);
-        messageList.appendChild(message);
-
-        message.className = "message-box visible";
-
-        const TIME_TO_SEE = 2000;
-
-        setTimeout(() => {message.className="message-box invisible"}, TIME_TO_SEE);
-
-        setTimeout(() => {messageList.removeChild(message)}, TIME_TO_SEE+240);
+        showMessage(document, err.message);
     }
 }
 

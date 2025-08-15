@@ -48,6 +48,29 @@ fastify.post('/api/login', async (request, reply) => {
   return reply.send({ ok: true, username: user.name });
 });
 
+fastify.post('/api/signup', async (request, reply) => {
+  const { username, password, rePassword } = request.body || {};
+  if (!username || !password) return reply.code(400).send({ error: 'Заполните все поля!' });
+  if (password != rePassword) return reply.code(400).send({ error: 'Пароли не совпадают!' });
+
+  const users = await readDataFile('users.json');
+  const sameNameUser = users.find(u => u.name === username);
+  if(sameNameUser) return reply.code(401).send({error: `Пользователь ${username} уже существует`});
+
+  const user = {
+    id: `${users.length + 1}`,
+    name: username,
+    bio: 'Привет! Я пользователь T-News',
+    avatar: null,
+    password: password
+  }
+
+  users.push(user);
+
+  await writeDataFile('users.json', users);
+  return reply.send({ok: true, username: user.name});
+});
+
 try {
   await fastify.listen({ port: 3000});
   fastify.log.info('Server listening on port 3000');
