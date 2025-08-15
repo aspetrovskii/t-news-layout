@@ -45,7 +45,8 @@
                 font-size: 15px;
                 line-height: 24px;
                 padding: 16px;
-                height: 56px;
+                /* height: 56px; */
+                min-height: 56px;
                 font-family: sans-serif;
                 margin: 0   ;
             }

@@ -10,6 +10,7 @@
     justify-content: center;
     position: fixed;
     font-family: sans-serif;
+    z-index: 2;
 
     .heading-cent{
         max-width: 824px;

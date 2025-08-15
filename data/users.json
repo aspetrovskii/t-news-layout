@@ -12,5 +12,12 @@
     "bio": "Ыыыыы го забив ыээаэаээаэа",
     "avatar": "/public/seneka.jpg",
     "password": "12345678"
+  },
+  {
+    "id": "3",
+    "name": "sad",
+    "bio": "Привет! Я пользователь T-News",
+    "avatar": null,
+    "password": "asd"
   }
 ]
