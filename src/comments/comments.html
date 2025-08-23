@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <title>T-News — Комментарии к посту</title>
-    <link rel="stylesheet" href="comments.css">
+    <link rel="stylesheet" href="src/comments/comments.css">
 </head>
 <header class="heading">
     <div class="heading-cent">
         <div class="heading-left">
-            <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
-            <input type="text" class="field" placeholder="Поиск по T-News">
+            <!-- <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
+            <input type="text" class="field" placeholder="Поиск по T-News"> -->
         </div>
         <div class="heading-right">
-            <button class="signup">
+            <!-- <button class="signup">
                 <p class="text">Выйти</p>
                 <img class="heading-button-pic" src="/public/login-button.svg" alt="Выйти">
             </button>
             <button class="signup">
                 <img class="profile-button-pic" src="/public/profile-pic.svg" alt="Профиль">
-            </button>
+            </button> -->
         </div>
     </div>
 </header>
@@ -90,7 +90,7 @@
                             </div>
                         </li>
                     </ul>
-                    <form class="comment-form">
+                    <form class="comment-form" id="comment-form">
                         <textarea class="comment-field" placeholder="Введите свой комментарий"></textarea>
                         <section class="button-area">
                             <button type="submit" class="button primary x">Отправить</button>
@@ -104,5 +104,6 @@
         <ul class="messages">
         </ul>
     </section>
+    <script src="src/app.js" type="module"></script>
 </body>
 </html>

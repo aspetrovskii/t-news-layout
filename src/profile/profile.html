@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <title>T-News — Профиль Seneka Senekovich</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="src/profile/profile.css">
 </head>
 <header class="heading">
     <div class="heading-cent">
         <div class="heading-left">
-            <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
-            <input type="text" class="field" placeholder="Поиск по T-News">
+            <!-- <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
+            <input type="text" class="field" placeholder="Поиск по T-News"> -->
         </div>
         <div class="heading-right">
-            <button class="signup">
+            <!-- <button class="signup">
                 <p class="text">Выйти</p>
                 <img class="heading-button-pic" src="/public/login-button.svg" alt="Выйти">
             </button>
             <button class="signup">
                 <img class="profile-button-pic" src="/public/profile-pic.svg" alt="Профиль">
-            </button>
+            </button> -->
         </div>
     </div>
 </header>
@@ -37,26 +37,20 @@
                 <div class="base-text">
                     <div class="user-name">
                         <p class="name">Луций Анней Сенека</p>
-                        <button class="edit-name">
+                        <button class="edit-name" id="edit-name">
                             <img class="edit-name-img" src="/public/rename-profile.svg" alt="Rename profile">
                         </button>
                     </div>
                     <div class="user-info">
-                        <p class="info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consectetur
-                             adipisicing elit. Perspiciatis, rerum. Ducimus iste
-                              est quod officia nisi nulla. Alias sit nesciunt facilis,
-                               sequi aut non ab cumque itaque natus at obcaecati
-                                amet voluptatem tempora iusto ipsam sint blanditiis
-                                 voluptates consectetur neque vitae enim? Possimus
-                                  est quisquam eos, delectus ipsa doloribus cum!</p>
-                        <button class="edit-info">
+                        <p class="info"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!</p>
+                        <button class="edit-info" id="edit-info">
                             <img class="edit-name-img" src="/public/rename-profile.svg" alt="Rename profile">
                         </button>
                     </div>
                 </div>
-                <div class="base-subscribe">
+                <!-- <div class="base-subscribe">
                     <button class="sub">Подписаться</button>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- <section class="content-box">
@@ -69,6 +63,12 @@
         </section> -->
         <section class="tab"></section>
         <section class="content-box">
+            <form class="post-form" id="post-form">
+                <textarea class="post-field" placeholder="Введите ваш пост"></textarea>
+                <section class="button-area">
+                    <button type="submit" class="button primary x">Отправить</button>
+                </section>
+            </form>
             <section class="posts">
                 <ul class="posts-list">
                     <li>
@@ -149,5 +149,6 @@
         <ul class="messages">
         </ul>
     </section>
+    <script src="src/app.js" type="module"></script>
 </body>
 </html>
