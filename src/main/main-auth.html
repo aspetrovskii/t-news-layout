@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <title>T-News — Главная</title>
-    <link rel="stylesheet" href="main-auth.css">
+    <link rel="stylesheet" href="src/main/main-auth.css">
 </head>
 <body>
     <header class="heading">
         <div class="heading-cent">
             <div class="heading-left">
-                <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
-                <input type="text" class="field" placeholder="Поиск по T-News">
+                <!-- <img class="logo" src="/public/tbank-logo.svg" alt="TBank logo">
+                <input type="text" class="field" placeholder="Поиск по T-News"> -->
             </div>
             <div class="heading-right">
-                <button class="signup" id="logout">
+                <!-- <button class="signup" id="logout">
                     <p class="text">Выйти</p>
                     <img class="heading-button-pic" src="/public/login-button.svg" alt="Выйти">
                 </button>
                 <button class="signup">
                     <img class="profile-button-pic" src="/public/profile-pic.svg" alt="Профиль">
-                </button>
+                </button> -->
             </div>
         </div>
     </header>
@@ -31,7 +31,9 @@
                         <section class="post-section">
                             <div class="user">
                                 <img class="avatar" src="/public/seneka.jpg" alt="Author's avatar">
-                                <p class="name">Seneka Senekovich</p>
+                                <button class="post-user-button" type="button" style="background: none; border: none">
+                                    <p class="name">Seneka Senekovich</p>
+                                </button>
                             </div>
                         </section>
                         <section class="post-section" id="two">
@@ -67,6 +69,6 @@
         <ul class="messages">
         </ul>
     </section>
-    <script src="main-auth.js"></script>
+    <script type="module" src="src/app.js"></script>
 </body>
 </html>
