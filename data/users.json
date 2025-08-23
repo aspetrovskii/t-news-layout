@@ -1,12 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "seneka",
-    "bio": "Философ-историк, государственный деятель и драматург Древнего Рима. Автор многочисленных философских трактатов и писем.",
-    "avatar": "/public/seneka.jpg",
-    "password": "00000000"
-  },
-  {
     "id": "2",
     "name": "pasha_nikolenko",
     "bio": "Ыыыыы го забив ыээаэаээаэа",
@@ -19,5 +12,33 @@
     "bio": "Привет! Я пользователь T-News",
     "avatar": null,
     "password": "asd"
+  },
+  {
+    "id": "33",
+    "name": "vow",
+    "bio": "Привет! Я пользователь T-News",
+    "avatar": null,
+    "password": "123"
+  },
+  {
+    "id": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
+    "name": "2",
+    "bio": "Привет! Я пользователь T-News",
+    "avatar": null,
+    "password": "2"
+  },
+  {
+    "id": "6d11dab5-a660-4d2d-b5a1-c7ce5f433676",
+    "name": "ываыаыавы",
+    "bio": "Привет! Я пользователь T-News",
+    "avatar": null,
+    "password": "1"
+  },
+  {
+    "id": "1",
+    "name": "1",
+    "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!",
+    "avatar": "/public/seneka.jpg",
+    "password": "00000000"
   }
 ]

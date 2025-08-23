@@ -12,7 +12,10 @@ async function signup(username, password, rePassword){
 
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Ошибка регистрации');
-    return data;
+    const token = data.token;
+    if(!token) throw new Error('Сервер не вернул токен досутпа');
+    localStorage.setItem('access_token', token);
+    return token;
 }
 
 async function handleSignupSubmit(e){

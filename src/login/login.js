@@ -12,7 +12,10 @@ async function login(username, password){
 
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Ошибка логина');
-    return data;
+    const token = data.token;
+    if(!token) throw new Error('Сервер не вернул токен досутпа');
+    localStorage.setItem('access_token', token);
+    return token;
 }
 
 async function handleLoginSubmit(e){
@@ -31,7 +34,7 @@ async function handleLoginSubmit(e){
 
 document.addEventListener("DOMContentLoaded", () =>{
     signupButton.addEventListener("click", () => {
-        window.open("../signup/signup.html", "_self");
+        window.open("/signup", "_self");
     });
 
     loginDialog.addEventListener('submit', handleLoginSubmit);

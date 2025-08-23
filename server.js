@@ -3,6 +3,9 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fastifyCors from '@fastify/cors';
+import fastifyJwt from '@fastify/jwt';
+import fastifyStatic from '@fastify/static';
+import { uuid } from 'uuidv4';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,7 +13,11 @@ const __dirname = path.dirname(__filename);
 const fastify = Fastify({ logger: true });
 
 await fastify.register(fastifyCors, {
-  origin: 'http://127.0.0.1:5500'
+  origin: 'http://localhost:3000'
+});
+await fastify.register(fastifyJwt, { secret: process.env.JWT_SECRET || 'supersecret' });
+await fastify.register(fastifyStatic, {
+  root: path.join(__dirname, '/'),
 });
 
 async function readDataFile(filename) {
@@ -33,7 +40,37 @@ async function writeDataFile(filename, data) {
   }
 }
 
-fastify.get('/', async () => ({ hello: 'world' }));
+// fastify.get('/', async () => ({ hello: 'world' }));
+
+fastify.get('/', (req, res) => {
+    res.sendFile('src/login/index.html');
+});
+fastify.get('/login', (req, res) => {
+    res.sendFile('src/login/index.html');
+});
+
+fastify.get('/signup', (req, res) => {
+    res.sendFile('src/signup/signup.html');
+});
+
+fastify.get('/main', (req, res) => {
+    res.sendFile('src/main/main-auth.html');
+});
+fastify.get('/main-noauth', (req, res) => {
+    res.sendFile('src/signup/signup.html');
+});
+
+fastify.get('/comments', (req, res) => {
+    res.sendFile('src/comments/comments.html');
+});
+
+fastify.get('/profile', (req, res) => {
+    res.sendFile('src/profile/profile.html');
+});
+
+fastify.get('/search', (req, res) => {
+    res.sendFile('src/search-users&posts/search-users&posts.html');
+});
 
 fastify.post('/api/login', async (request, reply) => {
   const { username, password } = request.body || {};
@@ -45,7 +82,12 @@ fastify.post('/api/login', async (request, reply) => {
 
   if (user.password !== password) return reply.code(401).send({ error: 'Неверный пароль' });
 
-  return reply.send({ ok: true, username: user.name });
+  const expiresIn = '15m';
+  const token = fastify.jwt.sign({ sub: user.id, name: user.name }, { expiresIn });
+
+  const { password: _pwd, ...safeUser } = user;
+
+  return reply.send({ token, user: safeUser });
 });
 
 fastify.post('/api/signup', async (request, reply) => {
@@ -58,7 +100,7 @@ fastify.post('/api/signup', async (request, reply) => {
   if(sameNameUser) return reply.code(401).send({error: `Пользователь ${username} уже существует`});
 
   const user = {
-    id: `${users.length + 1}`,
+    id: uuid(),
     name: username,
     bio: 'Привет! Я пользователь T-News',
     avatar: null,
@@ -66,9 +108,111 @@ fastify.post('/api/signup', async (request, reply) => {
   }
 
   users.push(user);
-
   await writeDataFile('users.json', users);
-  return reply.send({ok: true, username: user.name});
+
+  const {password: _pwd, ...safeUser} = user;
+
+  const expiresIn = '15m';  
+
+  const token = fastify.jwt.sign(
+    { sub: user.id, name: user.name },
+    { expiresIn }
+  );
+
+  return reply.send({ token, user: safeUser });
+});
+
+fastify.decorate("authenticate", async (req, reply) => {
+  try {
+    await req.jwtVerify();
+  } catch (err) {
+    reply.code(401).send(err);
+  }
+});
+
+fastify.post('/api/addPost', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const {content} = request.body || {};
+  if (!content) return reply.code(400).send({error: 'Пост должен содержать текст'});
+
+  const posts = await readDataFile('posts.json');
+  const post = {
+    id: uuid(),
+    authorId: request.user.sub,
+    content: content,
+    likesCount: 0,
+    commentsCount: 0,
+    likedBy: []
+  }
+  posts.push(post);
+  await writeDataFile('posts.json', posts);
+
+  return reply.code(201).send(post);
+});
+
+fastify.post('/api/addComment', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const {content, postId} = request.body || {};
+  if (!content) return reply.code(400).send({error: 'Комментарий должен содержать текст'});
+  if (!postId) return reply.code(400).send({error: 'Комментарий должен быть привязан к посту'});
+
+  const posts = await readDataFile('posts.json');
+  const targetPost = posts.find(p => p.id === postId);
+  if(!targetPost) return reply.code(400).send({error: 'Комментарий должен быть к существующему посту'});
+
+  const comments = await readDataFile('comments.json');
+  const comment = {
+    id: uuid(),
+    postId: postId,
+    authorId: request.user.sub,
+    content: content
+  }
+  comments.push(comment);
+  await writeDataFile('comments.json', comments);
+
+  return reply.code(201).send(comment);
+});
+
+fastify.post('/api/editName', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const { newText } = request.body || {};
+  if (!newText) return reply.code(400).send({error: 'Имя должно содержать текст'});
+
+  const users = await readDataFile('users.json');
+  const sameNameUser = users.find(u => u.name === newText);
+  if(sameNameUser) return reply.code(400).send({error: 'Пользователь с таким именем уже существует'});
+
+  const user = users.find(u => u.id === request.user.sub);
+  if(!user) return reply.code(400).send({error: 'Неверная авторизация'});
+
+  const newUsers = users.filter(u => u.id !== request.user.sub);
+  user.name = newText;
+  newUsers.push(user);
+  await writeDataFile('users.json', newUsers);
+
+  const {password: _pwd, ...safeUser} = user;
+
+  const expiresIn = '15m';  
+
+  const token = fastify.jwt.sign(
+    { sub: user.id, name: user.name },
+    { expiresIn }
+  );
+
+  return reply.send({ token, user: safeUser });
+});
+
+fastify.post('/api/editInfo', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const { newText } = request.body || {};
+  if (!newText) return reply.code(400).send({error: 'Bio должно содержать текст'});
+
+  const users = await readDataFile('users.json');
+  const user = users.find(u => u.id === request.user.sub);
+  if(!user) return reply.code(400).send({error: 'Неверная авторизация'});
+
+  const newUsers = users.filter(u => u.id !== request.user.sub);
+  user.bio = newText;
+  newUsers.push(user);
+  await writeDataFile('users.json', newUsers);
+
+  return reply.send({ user });
 });
 
 try {

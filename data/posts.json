@@ -3,75 +3,173 @@
     "id": "1",
     "authorId": "1",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sapiente aliquam sed accusamus quis est deleniti reiciendis amet rerum ratione reprehenderit voluptas, recusandae placeat consequuntur? Impedit amet temporibus doloremque ea, voluptatem vitae reprehenderit totam perspiciatis similique aliquam accusamus, corporis repellat sunt quis, ipsam maxime accusantium earum nesciunt distinctio mollitia voluptas necessitatibus nobis inventore blanditiis! Assumenda perferendis fugit eos accusamus asperiores. Impedit ad atque ipsam ducimus magni laudantium mollitia dolore natus similique veniam fugiat, nobis excepturi exercitationem minus temporibus, dolorum vero, quis dolorem eveniet? Quam veritatis maxime a adipisci dicta cupiditate excepturi illum modi. Vitae totam obcaecati quae perferendis voluptates reiciendis.",
-    "likesCount": 23,
+    "likesCount": 2,
     "commentsCount": 1,
-    "createdAt": "2024-01-15T10:30:00.000Z",
     "likedBy": [
       "2",
-      "3",
-      "40739c8e-82d7-4f89-b2f2-04ebf38cf9ef",
-      "6ed09bf4-0cd0-4180-832f-8928b087317e"
-    ]
-  },
-  {
-    "id": "2",
-    "authorId": "2",
-    "content": "Мудрость приходит с опытом, а опыт приходит с ошибками. Не бойтесь ошибаться, бойтесь не учиться на своих ошибках. Каждый день - это новая возможность стать лучше.",
-    "likesCount": 44,
-    "commentsCount": 3,
-    "createdAt": "2024-01-16T14:20:00.000Z",
-    "likedBy": [
       "3"
     ]
   },
   {
-    "id": "3",
-    "authorId": "3",
-    "content": "Свобода - это не отсутствие ограничений, а способность выбирать свои ограничения. Только тот, кто контролирует свои желания, по-настоящему свободен.",
-    "likesCount": 67,
-    "commentsCount": 3,
-    "createdAt": "2024-01-17T09:15:00.000Z",
-    "likedBy": [
-      "2",
-      "6ed09bf4-0cd0-4180-832f-8928b087317e"
-    ]
-  },
-  {
-    "id": "4",
+    "id": "2",
     "authorId": "1",
-    "content": "Время - самый ценный ресурс, который у нас есть. Не тратьте его на пустые разговоры и бесполезные занятия. Каждая минута должна быть потрачена с пользой.",
-    "likesCount": 34,
+    "content": "LITHUANIA LITVA LITOVSKA",
+    "likesCount": 1,
     "commentsCount": 0,
-    "createdAt": "2024-01-18T16:45:00.000Z",
     "likedBy": [
       "2"
     ]
   },
   {
-    "id": "a0bcb76b-ea46-4772-9417-ca2bdd5262ce",
-    "authorId": "6ed09bf4-0cd0-4180-832f-8928b087317e",
-    "content": "ХУЙНЯ",
+    "id": "c2e98219-8df5-4862-9eb0-fe1f59cea5a9",
+    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
+    "content": "",
     "likesCount": 0,
     "commentsCount": 0,
-    "createdAt": "2025-08-01T14:01:09.635Z",
     "likedBy": []
   },
   {
-    "id": "c269e56f-d800-40d0-81c2-3d90309b5cda",
-    "authorId": "6ed09bf4-0cd0-4180-832f-8928b087317e",
-    "content": "Обэме лох либералы сосать!",
+    "id": "8b318d5a-de04-45dc-aaee-1ec18c705dc8",
+    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
+    "content": "",
     "likesCount": 0,
     "commentsCount": 0,
-    "createdAt": "2025-08-01T14:01:41.548Z",
     "likedBy": []
   },
   {
-    "id": "8509de75-4dee-45a2-8f5e-fbd6d5f59ad8",
-    "authorId": "6ed09bf4-0cd0-4180-832f-8928b087317e",
-    "content": "<script>alert(\"я гей епта\")</script>",
+    "id": "c88e4caf-9acc-4f9f-8663-de7bb0cca9da",
+    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
+    "content": "",
     "likesCount": 0,
     "commentsCount": 0,
-    "createdAt": "2025-08-01T14:02:28.295Z",
+    "likedBy": []
+  },
+  {
+    "id": "ac575fe5-be17-403e-b770-a9839423a346",
+    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "8cef92b1-9e28-482a-bfc7-538cfd446936",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "32d6b64c-fd44-4484-97f6-a8a46f8f04d8",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "1b0d761b-8c79-4aaa-b653-247d33491bb6",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "23297fe0-17bc-43ff-beca-ff521705ae43",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "8497d5a2-a53b-4069-87fc-e94bd54b8b3b",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "58274061-e325-4457-9972-9cd9972fe2a9",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "cf083241-ea2a-4647-a747-90379617549f",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "1ee21982-54a8-49c7-ba0d-e82605cb2e9a",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "37ff5ff6-c33e-46d3-b256-5d7f0d6076a6",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "00a9662a-602b-4d42-a8ce-a1faabd970db",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "29989a7e-a01d-4450-a58a-7e1a56b164e7",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "2e4fadc4-c88c-49bf-9f72-a3d7cbc2799f",
+    "authorId": "1",
+    "content": "",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "e2c23c4c-1e18-4c26-8307-8e98c1c7f312",
+    "authorId": "1",
+    "content": "ban!",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "75687cd9-3ff1-4101-a792-1b6fa082e971",
+    "authorId": "6d11dab5-a660-4d2d-b5a1-c7ce5f433676",
+    "content": "аааааааааааааааааааааааааааайяяяяяяяяяяяяяяя",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "88887b46-cc10-4759-b4a7-8297c7be3bd7",
+    "authorId": "1",
+    "content": "ascsassd",
+    "likesCount": 0,
+    "commentsCount": 0,
     "likedBy": []
   }
 ]
