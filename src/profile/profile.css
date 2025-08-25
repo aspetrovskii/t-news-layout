@@ -150,6 +150,8 @@ body{
         font-size: 36px;
         line-height: 40px;
         letter-spacing: 0px;
+        max-width: 100%;
+        word-break: break-all;
     }
 
     .edit-name{
@@ -162,6 +164,7 @@ body{
 
 .user-info{
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
     height: auto;
@@ -175,6 +178,8 @@ body{
         font-size: 15px;
         line-height: 20px;
         letter-spacing: 0px;
+        max-width: 100%;
+        word-break: break-all;
     }
 
     .edit-info{

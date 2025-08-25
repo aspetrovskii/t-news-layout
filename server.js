@@ -143,7 +143,7 @@ fastify.post('/api/addPost', { preHandler: [fastify.authenticate] }, async (requ
     commentsCount: 0,
     likedBy: []
   }
-  posts.push(post);
+  posts.unshift(post);
   await writeDataFile('posts.json', posts);
 
   return reply.code(201).send(post);
@@ -159,7 +159,7 @@ fastify.post('/api/addComment', { preHandler: [fastify.authenticate] }, async (r
   if(!targetPost) return reply.code(400).send({error: 'Комментарий должен быть к существующему посту'});
   const newPosts = posts.filter(p => p.id !== postId);
   targetPost.commentsCount++;
-  newPosts.push(targetPost);
+  newPosts.unshift(targetPost);
   await writeDataFile('posts.json', newPosts);
 
   const comments = await readDataFile('comments.json');
@@ -275,7 +275,7 @@ fastify.post('/api/like', { preHandler: [fastify.authenticate] }, async (request
     post.likesCount++;
   }
 
-  newPosts.push(post);
+  newPosts.unshift(post);
   await writeDataFile('posts.json', newPosts);
 
   return reply.send({post});
@@ -321,7 +321,7 @@ fastify.post('/api/deleteComm', { preHandler: [fastify.authenticate] }, async (r
   if(!targetPost) return reply.code(400).send({error: 'Комментарий должен быть к существующему посту'});
   const newPosts = posts.filter(p => p.id !== comm.postId);
   targetPost.commentsCount--;
-  newPosts.push(targetPost);
+  newPosts.unshift(targetPost);
   await writeDataFile('posts.json', newPosts);
 
   const newComms = comms.filter(p => p.id !== commId);

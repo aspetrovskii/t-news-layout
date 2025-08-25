@@ -1,33 +1,5 @@
 [
   {
-    "id": "2",
-    "name": "pasha_nikolenko",
-    "bio": "Ыыыыы го забив ыээаэаээаэа",
-    "avatar": "/public/seneka.jpg",
-    "password": "12345678"
-  },
-  {
-    "id": "3",
-    "name": "sad",
-    "bio": "Привет! Я пользователь T-News",
-    "avatar": null,
-    "password": "asd"
-  },
-  {
-    "id": "33",
-    "name": "vow",
-    "bio": "Привет! Я пользователь T-News",
-    "avatar": null,
-    "password": "123"
-  },
-  {
-    "id": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
-    "name": "2",
-    "bio": "Привет! Я пользователь T-News",
-    "avatar": null,
-    "password": "2"
-  },
-  {
     "id": "6d11dab5-a660-4d2d-b5a1-c7ce5f433676",
     "name": "ываыаыавы",
     "bio": "Привет! Я пользователь T-News",
@@ -40,5 +12,47 @@
     "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio omnis doloribus suscipit sunt itaque? Ut magnam modi maxime dolore qui. Lorem ipsum dolor sit amet, consecteturadipisicing elit. Perspiciatis, rerum. Ducimus isteest quod officia nisi nulla. Alias sit nesciunt facilis,sequi aut non ab cumque itaque natus at obcaecatiamet voluptatem tempora iusto ipsam sint blanditiisvoluptates consectetur neque vitae enim? Possimusest quisquam eos, delectus ipsa doloribus cum!",
     "avatar": "/public/seneka.jpg",
     "password": "00000000"
+  },
+  {
+    "id": "2",
+    "name": "betters",
+    "bio": "Ыыыыы го забив ыээаэаээаэа",
+    "avatar": "/public/seneka.jpg",
+    "password": "12345678"
+  },
+  {
+    "id": "33",
+    "name": "33",
+    "bio": "maxverstappen",
+    "avatar": "/public/maxverstappen.png",
+    "password": "123"
+  },
+  {
+    "id": "ffa8a807-72e2-427e-be90-c5afee6c11a0",
+    "name": "charles_leclerc_fan",
+    "bio": "Привет! Я Charles Leclerc",
+    "avatar": "/public/seneka.jpg",
+    "password": "123"
+  },
+  {
+    "id": "5e3c2f52-a35f-42bf-ab76-eeff8d07ebbc",
+    "name": "Марк Аврелий",
+    "bio": "Марк Авре́лий Антони́н — римский император из династии Антонинов, философ, представитель позднего стоицизма, последователь Эпиктета.",
+    "avatar": "/public/seneka.jpg",
+    "password": "0000"
+  },
+  {
+    "id": "88b056d7-1a94-412b-a160-eb5a233415a5",
+    "name": "Рупор Live — свежие новости",
+    "bio": "Нейтрально, без пропаганды. Рупор Live с быстрыми новостями.\nНовости присылать сюда: телеграм @Ruporchan_Bot\nПо всем вопросам: телеграм @ruporch",
+    "avatar": "/public/topor-live.jpg",
+    "password": "12345678"
+  },
+  {
+    "id": "4c9f86fd-f2d1-4699-b9e5-d12d27925638",
+    "name": "333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "bio": "33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "avatar": "/public/seneka.jpg",
+    "password": "1"
   }
 ]

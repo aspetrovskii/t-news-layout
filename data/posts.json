@@ -1,175 +1,109 @@
 [
   {
-    "id": "1",
-    "authorId": "1",
-    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sapiente aliquam sed accusamus quis est deleniti reiciendis amet rerum ratione reprehenderit voluptas, recusandae placeat consequuntur? Impedit amet temporibus doloremque ea, voluptatem vitae reprehenderit totam perspiciatis similique aliquam accusamus, corporis repellat sunt quis, ipsam maxime accusantium earum nesciunt distinctio mollitia voluptas necessitatibus nobis inventore blanditiis! Assumenda perferendis fugit eos accusamus asperiores. Impedit ad atque ipsam ducimus magni laudantium mollitia dolore natus similique veniam fugiat, nobis excepturi exercitationem minus temporibus, dolorum vero, quis dolorem eveniet? Quam veritatis maxime a adipisci dicta cupiditate excepturi illum modi. Vitae totam obcaecati quae perferendis voluptates reiciendis.",
+    "id": "f05ceb16-46a1-4655-b7c9-877dbd1a5708",
+    "authorId": "4c9f86fd-f2d1-4699-b9e5-d12d27925638",
+    "content": "33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333",
+    "likesCount": 0,
+    "commentsCount": 0,
+    "likedBy": []
+  },
+  {
+    "id": "a9417618-aa82-45f3-8a5c-7d8bded8c0da",
+    "authorId": "5e3c2f52-a35f-42bf-ab76-eeff8d07ebbc",
+    "content": "Человек живёт только в настоящее мгновение. Всё остальное или прошло уже, или неизвестно, будет ли",
     "likesCount": 2,
-    "commentsCount": 1,
+    "commentsCount": 0,
     "likedBy": [
-      "2",
-      "3"
+      "88b056d7-1a94-412b-a160-eb5a233415a5",
+      "4c9f86fd-f2d1-4699-b9e5-d12d27925638"
     ]
   },
   {
-    "id": "2",
-    "authorId": "1",
-    "content": "LITHUANIA LITVA LITOVSKA",
+    "id": "c4c3f862-81a7-4546-8571-85187540f8f5",
+    "authorId": "5e3c2f52-a35f-42bf-ab76-eeff8d07ebbc",
+    "content": "Когда в силу обстоятельств нарушается равновесие духа, восстанови самообладание как можно быстрее и не оставайся в подавленном настроении слишком долго, иначе тебе будет уже нельзя ничем помочь",
     "likesCount": 1,
     "commentsCount": 0,
     "likedBy": [
-      "2"
+      "88b056d7-1a94-412b-a160-eb5a233415a5"
     ]
   },
   {
-    "id": "c2e98219-8df5-4862-9eb0-fe1f59cea5a9",
+    "id": "c376a2d5-54e8-4d51-b53f-026ef857e581",
+    "authorId": "5e3c2f52-a35f-42bf-ab76-eeff8d07ebbc",
+    "content": "Время человеческой жизни — миг; её сущность — вечное течение; ощущение — смутно; строение всего тела — бренно; душа — неустойчива; судьба — загадочна; слава — недостоверна",
+    "likesCount": 1,
+    "commentsCount": 0,
+    "likedBy": [
+      "4c9f86fd-f2d1-4699-b9e5-d12d27925638"
+    ]
+  },
+  {
+    "id": "6a2ecc54-fe71-4ba3-8714-55ef91cec775",
+    "authorId": "88b056d7-1a94-412b-a160-eb5a233415a5",
+    "content": "В Саратове умерла муха...",
+    "likesCount": 4,
+    "commentsCount": 0,
+    "likedBy": [
+      "88b056d7-1a94-412b-a160-eb5a233415a5",
+      "6d11dab5-a660-4d2d-b5a1-c7ce5f433676",
+      "1",
+      "4c9f86fd-f2d1-4699-b9e5-d12d27925638"
+    ]
+  },
+  {
+    "id": "fc07ee06-b7c5-4e4c-a2c2-45e9add1468a",
     "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
-    "content": "",
+    "content": "1",
+    "likesCount": 0,
+    "commentsCount": 1,
+    "likedBy": []
+  },
+  {
+    "id": "8ebb3608-bcb6-4086-a1a6-fac5059a29c2",
+    "authorId": "88b056d7-1a94-412b-a160-eb5a233415a5",
+    "content": "Воронеж накрыл сильный ливень с грозой.\n\nСМИ сообщают, что несколько улиц на юге города ушли под воду. Автомобили глохнут в глубоких лужах.\n\nИнформации о пострадавших нет.",
     "likesCount": 0,
     "commentsCount": 0,
     "likedBy": []
   },
   {
-    "id": "8b318d5a-de04-45dc-aaee-1ec18c705dc8",
-    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
-    "content": "",
+    "id": "d9bb29b0-38a3-4fb2-bcd8-71e64b66aaee",
+    "authorId": "88b056d7-1a94-412b-a160-eb5a233415a5",
+    "content": "Ярко-красная «Оленья» луна взошла над Россией: люди делятся кадрами из Москвы, Рязани, Ростова, Воронежа, Уфы и других регионов страны.\n\nНазвание придумали североамериканские индейцы — они заметили, что именно в этот период олени сбрасывают старые рога.",
     "likesCount": 0,
     "commentsCount": 0,
     "likedBy": []
   },
   {
-    "id": "c88e4caf-9acc-4f9f-8663-de7bb0cca9da",
-    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
-    "content": "",
-    "likesCount": 0,
+    "id": "b068460c-4c4e-4f61-9e93-f7b40e84c617",
+    "authorId": "5e3c2f52-a35f-42bf-ab76-eeff8d07ebbc",
+    "content": "Истинная ценность человека измеряется в тех вещах, к которым он стремится!",
+    "likesCount": 1,
     "commentsCount": 0,
-    "likedBy": []
+    "likedBy": [
+      "88b056d7-1a94-412b-a160-eb5a233415a5"
+    ]
   },
   {
-    "id": "ac575fe5-be17-403e-b770-a9839423a346",
-    "authorId": "2daf6857-62ad-4e3d-a584-f48aba3c8a47",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
+    "id": "ecc8902d-3e9b-44ac-acb9-6d1ee85fd410",
+    "authorId": "33",
+    "content": "Max Emilian Verstappen, F1 4-times WDC",
+    "likesCount": 2,
+    "commentsCount": 2,
+    "likedBy": [
+      "5e3c2f52-a35f-42bf-ab76-eeff8d07ebbc",
+      "88b056d7-1a94-412b-a160-eb5a233415a5"
+    ]
   },
   {
-    "id": "8cef92b1-9e28-482a-bfc7-538cfd446936",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "32d6b64c-fd44-4484-97f6-a8a46f8f04d8",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "1b0d761b-8c79-4aaa-b653-247d33491bb6",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "23297fe0-17bc-43ff-beca-ff521705ae43",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "8497d5a2-a53b-4069-87fc-e94bd54b8b3b",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "58274061-e325-4457-9972-9cd9972fe2a9",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "cf083241-ea2a-4647-a747-90379617549f",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "1ee21982-54a8-49c7-ba0d-e82605cb2e9a",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "37ff5ff6-c33e-46d3-b256-5d7f0d6076a6",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "00a9662a-602b-4d42-a8ce-a1faabd970db",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "29989a7e-a01d-4450-a58a-7e1a56b164e7",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "2e4fadc4-c88c-49bf-9f72-a3d7cbc2799f",
-    "authorId": "1",
-    "content": "",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "e2c23c4c-1e18-4c26-8307-8e98c1c7f312",
-    "authorId": "1",
-    "content": "ban!",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "75687cd9-3ff1-4101-a792-1b6fa082e971",
-    "authorId": "6d11dab5-a660-4d2d-b5a1-c7ce5f433676",
-    "content": "аааааааааааааааааааааааааааайяяяяяяяяяяяяяяя",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
-  },
-  {
-    "id": "88887b46-cc10-4759-b4a7-8297c7be3bd7",
-    "authorId": "1",
-    "content": "ascsassd",
-    "likesCount": 0,
-    "commentsCount": 0,
-    "likedBy": []
+    "id": "46539671-041a-494c-9b22-25c3cd348b9b",
+    "authorId": "88b056d7-1a94-412b-a160-eb5a233415a5",
+    "content": "В Японии выставили на продажу роскошный дом за 3 млн рублей — столько стоит двухкомнатная квартира в Саратове. Коттедж площадью 183 кв. м с семью комнатами находится в Нагасаки и выполнен в традиционном стиле. Низкая цена связана с оттоком молодёжи в мегаполисы.",
+    "likesCount": 1,
+    "commentsCount": 1,
+    "likedBy": [
+      "88b056d7-1a94-412b-a160-eb5a233415a5"
+    ]
   }
 ]
