@@ -58,6 +58,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 22px;
+    flex: 0 1 auto;
 }
 
 .onto-photo{
@@ -88,7 +89,7 @@ body{
     /* padding: 4px 8px 4px 8px; */
     margin: 0;
     box-sizing: border-box;
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     font-family: sans-serif;
     font-weight: 400;
     font-size: 13px;
@@ -119,6 +120,11 @@ body{
             background-color: var(--bg-accent-active-4);
         }
     }    
+}
+
+.img-field{
+    width: 100%;
+    max-width: 128px;
 }
 
 .base-text{

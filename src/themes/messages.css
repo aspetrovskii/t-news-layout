@@ -38,7 +38,7 @@
                 min-width: unset;
                 max-width: unset;
                 flex: 1 1 auto;
-                background-color: var(--bg-neutral-1);
+                background-color: var(--bg-heading);
                 border: thin solid transparent;
                 color: var(--text-primary-on-accent);
                 justify-content: center;
