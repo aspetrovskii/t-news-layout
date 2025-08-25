@@ -56,9 +56,9 @@ fastify.get('/signup', (req, res) => {
 fastify.get('/main', (req, res) => {
     res.sendFile('src/main/main-auth.html');
 });
-fastify.get('/main-noauth', (req, res) => {
-    res.sendFile('src/signup/signup.html');
-});
+// fastify.get('/main-noauth', (req, res) => {
+//     res.sendFile('src/signup/signup.html');
+// });
 
 fastify.get('/comments', (req, res) => {
     res.sendFile('src/comments/comments.html');
@@ -82,7 +82,7 @@ fastify.post('/api/login', async (request, reply) => {
 
   if (user.password !== password) return reply.code(401).send({ error: 'Неверный пароль' });
 
-  const expiresIn = '15m';
+  const expiresIn = '1500m';
   const token = fastify.jwt.sign({ sub: user.id, name: user.name }, { expiresIn });
 
   const { password: _pwd, ...safeUser } = user;
@@ -103,7 +103,7 @@ fastify.post('/api/signup', async (request, reply) => {
     id: uuid(),
     name: username,
     bio: 'Привет! Я пользователь T-News',
-    avatar: null,
+    avatar: '/public/seneka.jpg',
     password: password
   }
 
@@ -112,7 +112,7 @@ fastify.post('/api/signup', async (request, reply) => {
 
   const {password: _pwd, ...safeUser} = user;
 
-  const expiresIn = '15m';  
+  const expiresIn = '1500m';  
 
   const token = fastify.jwt.sign(
     { sub: user.id, name: user.name },
@@ -157,6 +157,10 @@ fastify.post('/api/addComment', { preHandler: [fastify.authenticate] }, async (r
   const posts = await readDataFile('posts.json');
   const targetPost = posts.find(p => p.id === postId);
   if(!targetPost) return reply.code(400).send({error: 'Комментарий должен быть к существующему посту'});
+  const newPosts = posts.filter(p => p.id !== postId);
+  targetPost.commentsCount++;
+  newPosts.push(targetPost);
+  await writeDataFile('posts.json', newPosts);
 
   const comments = await readDataFile('comments.json');
   const comment = {
@@ -189,7 +193,7 @@ fastify.post('/api/editName', { preHandler: [fastify.authenticate] }, async (req
 
   const {password: _pwd, ...safeUser} = user;
 
-  const expiresIn = '15m';  
+  const expiresIn = '1500m';  
 
   const token = fastify.jwt.sign(
     { sub: user.id, name: user.name },
@@ -213,6 +217,168 @@ fastify.post('/api/editInfo', { preHandler: [fastify.authenticate] }, async (req
   await writeDataFile('users.json', newUsers);
 
   return reply.send({ user });
+});
+
+fastify.post('/api/loadPosts', async (request, reply) => {
+  const posts = await readDataFile('posts.json');
+  return reply.send({ posts });
+});
+
+fastify.post('/api/loadUser', async (request, reply) => {
+  const {userId} = request.body || {};
+  if(!userId) return reply.code(400).send({error: 'Загрузить пользователя: Запрос должен содержать ID пользователя'});
+
+  const users = await readDataFile('users.json');
+  const user = users.find(u => u.id === userId);
+  if(!user) return reply.code(400).send({error: 'Загрузить пользователя: Неверный ID пользователя в запросе'});
+
+  return reply.send({ user });
+});
+
+fastify.post('/api/loadUsers', async (request, reply) => {
+  const users = await readDataFile('users.json');
+  return reply.send({ users: users });
+});
+
+fastify.post('/api/isLiked', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const { postId } = request.body || {};
+  if(!postId) return reply.code(400).send({error: 'Проверить лайк: Запрос должен содержать ID поста'});
+  
+  const posts = await readDataFile('posts.json');
+  const post = posts.find(p => p.id === postId);
+  if(!post) return reply.code(400).send({error: 'Поставить лайк: Неверный ID поста в запросе'});
+  const liked = post.likedBy.find(uid => uid === request.user.sub);
+  if(liked) return reply.send({liked: true});
+  else return reply.send({liked: false});
+});
+
+fastify.post('/api/like', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const { postId } = request.body || {};
+  if(!postId) return reply.code(400).send({error: 'Поставить лайк: Запрос должен содержать ID поста'});
+  
+  const posts = await readDataFile('posts.json');
+  const post = posts.find(p => p.id === postId);
+  if(!post) return reply.code(400).send({error: 'Поставить лайк: Неверный ID поста в запросе'});
+
+  const newPosts = posts.filter(p => p.id !== postId);
+
+  const liked = post.likedBy.find(uid => uid === request.user.sub);
+  if (liked) {
+    // console.log('dislike\n');
+    const newLikedBy = post.likedBy.filter(uid => uid !== request.user.sub);
+    post.likedBy = newLikedBy;
+    post.likesCount--;
+  }
+  else {
+    // console.log('like\n');
+    post.likedBy.push(request.user.sub);
+    post.likesCount++;
+  }
+
+  newPosts.push(post);
+  await writeDataFile('posts.json', newPosts);
+
+  return reply.send({post});
+});
+
+fastify.post('/api/deletePost', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const { postId } = request.body || {};
+  if(!postId) return reply.code(400).send({error: 'Удалить пост: Запрос должен содержать ID поста'});
+  
+  const posts = await readDataFile('posts.json');
+  const post = posts.find(p => p.id === postId);
+  if(!post) return reply.code(400).send({error: 'Удалить пост: Неверный ID поста в запросе'});
+
+  const comms = await readDataFile('comments.json');
+  const newComms = comms.filter(c => c.postId !== postId);
+  await writeDataFile('comments.json', newComms);
+
+  const newPosts = posts.filter(p => p.id !== postId);
+  await writeDataFile('posts.json', newPosts);
+
+  return reply.send({post});
+});
+
+fastify.post('/api/loadComms', async (request, reply) => {
+  const {postId} = request.body || {};
+  if(!postId) return reply.code(400).send({error: 'Загрузить комментарии: Запрос должен содержать ID поста'});
+
+  const comms = await readDataFile('comments.json');
+  const newComms = comms.filter(c => c.postId === postId);
+  return reply.send({ comms: newComms });
+});
+
+fastify.post('/api/deleteComm', { preHandler: [fastify.authenticate] }, async (request, reply) => {
+  const { commId } = request.body || {};
+  if(!commId) return reply.code(400).send({error: 'Удалить комментарий: Запрос должен содержать ID комментария'});
+  
+  const comms = await readDataFile('comments.json');
+  const comm = comms.find(c => c.id === commId);
+  if(!comm) return reply.code(400).send({error: 'Удалить комментарий: Неверный ID комментария в запросе'});
+
+  const posts = await readDataFile('posts.json');
+  const targetPost = posts.find(p => p.id === comm.postId);
+  if(!targetPost) return reply.code(400).send({error: 'Комментарий должен быть к существующему посту'});
+  const newPosts = posts.filter(p => p.id !== comm.postId);
+  targetPost.commentsCount--;
+  newPosts.push(targetPost);
+  await writeDataFile('posts.json', newPosts);
+
+  const newComms = comms.filter(p => p.id !== commId);
+  await writeDataFile('comments.json', newComms);
+
+  return reply.send({comm});
+});
+
+fastify.post('/api/checkUserId', async (request, reply) => {
+  const {userId} = request.body || {};
+
+  const users = await readDataFile('users.json');
+  const user = users.find(u => u.id === userId);
+  if(!user) return reply.code(400).send();
+  return reply.send();
+});
+
+fastify.post('/api/checkPostId', async (request, reply) => {
+  const {postId} = request.body || {};
+
+  const posts = await readDataFile('posts.json');
+  const post = posts.find(p => p.id === postId);
+  if(!post) return reply.code(400).send();
+  return reply.send();
+});
+
+fastify.post('/api/getPicSRC', async (request, reply) => {
+  const {userId} = request.body || {};
+  if(!userId) return reply.code(400).send({error: 'Запрос должен содержать ID пользователя'});
+  
+  const users = await readDataFile('users.json');
+  const user = users.find(u => u.id === userId);
+  if(!user) reply.code(400).send({error: 'Неверный ID пользователя'});
+  
+  return reply.send({picSRC: user.avatar});
+});
+
+fastify.post('/api/getUserName', async (request, reply) => {
+  const {userId} = request.body || {};
+  if(!userId) return reply.code(400).send({error: 'Запрос должен содержать ID пользователя'});
+  
+  const users = await readDataFile('users.json');
+  const user = users.find(u => u.id === userId);
+  if(!user) reply.code(400).send({error: 'Неверный ID пользователя'});
+  
+  return reply.send({name: user.name});
+});
+
+fastify.post('/api/getUserBio', async (request, reply) => {
+  const {userId} = request.body || {};
+  if(!userId) return reply.code(400).send({error: 'Запрос должен содержать ID пользователя'});
+  
+  const users = await readDataFile('users.json');
+  const user = users.find(u => u.id === userId);
+  if(!user) reply.code(400).send({error: 'Неверный ID пользователя'});
+  
+  return reply.send({bio: user.bio});
 });
 
 try {
